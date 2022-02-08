@@ -3,12 +3,13 @@ const ADD_TODO = "counter/ADD_TODO";
 const TOGGLE_TODO = "counter/TOGGLE_TODO";
 
 // 액션 생성함수 만들기
-let nextId = 1;
+let nextId = 2;
 export const addTodo = (text) => ({
   type: ADD_TODO,
   todo: {
     id: nextId++,
     text,
+    done: false,
   },
 });
 

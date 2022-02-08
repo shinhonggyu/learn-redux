@@ -5,10 +5,7 @@ import Counter from "../components/Counter";
 import { setDiff, increase, decrease } from "../modules/counter";
 
 const CounterContainer = () => {
-  const { number, diff } = useSelector((state) => ({
-    number: state.counter.number,
-    diff: state.counter.diff,
-  }));
+  const { number, diff } = useSelector((state) => state.counter);
 
   const dispatch = useDispatch();
 
